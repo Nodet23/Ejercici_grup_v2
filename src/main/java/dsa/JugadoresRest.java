@@ -106,6 +106,7 @@ public class JugadoresRest {
     /*
    * Añadir personaje al jugador
    * Consultar objetos personaje/s
+   *
     */
 
 }
