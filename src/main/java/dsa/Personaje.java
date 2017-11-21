@@ -1,5 +1,7 @@
 package dsa;
 
+import java.util.ArrayList;
+
 /**
  * Created by nodet on 20/11/17.
  */
@@ -11,18 +13,21 @@ public class Personaje {
     private int ataque;
     private int defensa;
     private int hp;
+    ArrayList<Objeto> objetos;
 
-    public Personaje(String nombre, String id, int nivel, int ataque, int defensa, int hp) {
+
+    public Personaje(String nombre, String id, int nivel, int ataque, int defensa, int hp, ArrayList<Objeto> objetos) {
         this.nombre = nombre;
         this.id = id;
         this.nivel = nivel;
         this.ataque = ataque;
         this.defensa = defensa;
         this.hp = hp;
+        this.objetos = objetos;
     }
 
     public Personaje(){
-
+        objetos = new ArrayList<Objeto>();
     }
 
     public String getNombre() {
@@ -71,5 +76,13 @@ public class Personaje {
 
     public void setHp(int hp) {
         this.hp = hp;
+    }
+
+    public ArrayList<Objeto> getObjetos() {
+        return objetos;
+    }
+
+    public void setObjetos(ArrayList<Objeto> objetos) {
+        this.objetos = objetos;
     }
 }
